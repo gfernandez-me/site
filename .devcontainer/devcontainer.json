@@ -1,0 +1,34 @@
+{
+    "name": "Next.js Development",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "web",
+    "workspaceFolder": "/workspace",
+    "initializeCommand": "ls",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "dbaeumer.vscode-eslint",
+                "esbenp.prettier-vscode",
+                "bradlc.vscode-tailwindcss",
+                "ms-vscode.vscode-typescript-next",
+                "formulahendry.auto-rename-tag",
+                "christian-kohler.path-intellisense",
+                "streetsidesoftware.code-spell-checker",
+                "ms-azuretools.vscode-docker",
+                "yoavbls.pretty-ts-errors",
+                "eamodio.gitlens"
+            ],
+            "settings": {
+                "editor.formatOnSave": true,
+                "editor.defaultFormatter": "esbenp.prettier-vscode",
+                "typescript.tsdk": "node_modules/typescript/lib",
+                "terminal.integrated.shell.linux": "/bin/zsh"
+            }
+        }
+    },
+    "forwardPorts": [
+        3001,
+        24678
+    ],
+    "remoteUser": "node"
+}

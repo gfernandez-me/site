@@ -1,0 +1,17 @@
+version: "3.5"
+networks:
+  default:
+    name: nexjs-dev-boilerplate-net
+volumes:
+  node_modules:
+  next:
+services:
+  web:
+    build: .
+    working_dir: /workspace
+    env_file: devcontainer.env
+    volumes:
+      - ..:/workspace:cached
+    command: sleep infinity
+    ports:
+      - 22001:22001
