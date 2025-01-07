@@ -1,7 +1,7 @@
 import Script from "next/script";
 import { Inter } from "next/font/google";
 import { Metadata } from "next";
-
+import type { Viewport } from "next";
 import "./globals.css";
 import Header from "@/components/layout/header";
 import { Providers } from "@/lib/providers";
@@ -11,8 +11,15 @@ const inter = Inter({ subsets: ["latin"] });
 
 const title = "Gabriel Fernandez | Full Stack Developer From Toronto, Canada.";
 const description =
-  "A self-proclaimed designer who specializes in full stack development (React.js & Node.js), from Toronto, Canada.";
+  "A passionate full-stack developer specializing in React.js and Node.js, based in Toronto, Canada, with a strong focus on creating seamless and visually appealing designs.";
 const url = "https://gfernandez.dev";
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
@@ -21,38 +28,12 @@ export const metadata: Metadata = {
   keywords: [
     "Frontend Developer",
     "Full Stack Developer",
+    "Laravel Developer",
+    "VueJS Developer",
     "React Developer",
     "Next.js Developer",
   ],
   creator: "Gabriel Fernandez",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
-  openGraph: {
-    type: "website",
-    url,
-    title,
-    description,
-    siteName: title,
-    images: [
-      {
-        url: "/images/open-graph-sagar.png",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title,
-    description,
-    creator: "@shahsagarm",
-    images: "/images/open-graph-sagar.png",
-  },
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
-  },
 };
 
 const googleAnalyticsId = process.env.GOOGLE_ANALYTICS_ID;
@@ -70,7 +51,7 @@ export default function RootLayout({
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}
           ></Script>
-          <Script id="google-anayltics-script">
+          <Script id="google-analytics-script">
             {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -79,9 +60,30 @@ export default function RootLayout({
             gtag('config', '${googleAnalyticsId}');
           `}
           </Script>
+          <link rel="shortcut icon" href="/favicon.ico" />
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+          />
         </head>
       ) : null}
-      <body className={`${inter.className} bg-gray text-gray-600 antialiased`}>
+      <body
+        className={`${inter.className} bg-gray text-gray-600 antialiased`}
+        suppressHydrationWarning
+      >
         <Providers>
           <Header />
           <main className="flex min-h-screen w-full flex-col">{children}</main>
