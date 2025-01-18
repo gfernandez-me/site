@@ -34,10 +34,14 @@ const HeroSection = () => {
               I’m Gabriel, a seasoned full-stack developer specializing in
               React.js, PHP and Node.js. I’m passionate about creating
               exceptional digital experiences that are fast, accessible,
-              visually appealing, and fully responsive. With over 17 years of
-              experience in building web applications, my enthusiasm for
-              development is as vibrant as ever, approaching every project with
-              fresh energy and excitement.
+              visually appealing, and fully responsive. With over{" "}
+              {Math.floor(
+                (new Date().getTime() - new Date("2007-04-01").getTime()) /
+                  (1000 * 60 * 60 * 24 * 365.25)
+              )}{" "}
+              years of experience in building web applications, my enthusiasm
+              for development is as vibrant as ever, approaching every project
+              with fresh energy and excitement.
             </Typography>
           </div>
           <div className="flex flex-col gap-2">

@@ -12,8 +12,21 @@ import Container from "@/components/layout/container";
 import useWindowSize from "@/hooks/use-window-size";
 import { copyTextToClipboard } from "@/lib/utils";
 
-let email = "contact.me.gabriel.fernandez@gmail.com";
-let phone = "+1 647 563-9688";
+// Email and phone parts split and encoded in base64
+const emailParts = [
+  "Y29udGFjdA==", // contact
+  "bWU=", // me
+  "Z2FicmllbA==", // gabriel
+  "ZmVybmFuZGV6", // fernandez
+  "QGdtYWlsLmNvbQ==", // @gmail.com
+];
+
+const phoneParts = [
+  "KzE=", // +1
+  "NjQ3", // 647
+  "NTYz", // 563
+  "OTY4OA==", // 9688
+];
 
 type CopyValue = "email" | "phone";
 
@@ -24,15 +37,31 @@ const ContactSection = () => {
     null
   );
 
-  const handleCopyClick = async (text: string, type: CopyValue) => {
+  // Decode base64 for copying
+  const getDecodedEmail = () => {
+    return emailParts.map((part) => atob(part)).join(".");
+  };
+
+  const getDecodedPhone = () => {
+    return phoneParts
+      .map((part) => atob(part))
+      .join(" ")
+      .replace(" ", "-");
+  };
+
+  const handleCopyClick = async (type: CopyValue) => {
     try {
-      await copyTextToClipboard(text);
+      const textToCopy =
+        type === "email"
+          ? getDecodedEmail()
+          : getDecodedPhone().replace(/\s/g, "");
+      await copyTextToClipboard(textToCopy);
       setIsCopied(true);
       setCopiedValueType(type);
-      let timoutId: any = setTimeout(() => {
+      let timeoutId: any = setTimeout(() => {
         setIsCopied(false);
         setCopiedValueType(null);
-        clearTimeout(timoutId);
+        clearTimeout(timeoutId);
       }, 1500);
     } catch (error) {
       setIsCopied(false);
@@ -57,12 +86,17 @@ const ContactSection = () => {
         <div className="flex flex-col items-center md:gap-4">
           <div className="flex items-center gap-4 md:gap-5">
             <Mail className="h-6 w-6 md:h-8 md:w-8" />
-            {/* <Link href={`mailto:${email}`}> */}
-            <Typography variant="h2">{email}</Typography>
-            {/* </Link> */}
+            <Typography variant="h2">
+              {emailParts.map((part, index) => (
+                <span key={index}>
+                  {atob(part)}
+                  {index < emailParts.length - 1 ? "." : ""}
+                </span>
+              ))}
+            </Typography>
             <IconButton
               size={width && width < 768 ? "md" : "lg"}
-              onClick={() => handleCopyClick(email, "email")}
+              onClick={() => handleCopyClick("email")}
               showTooltip={isCopied && copiedValueType === "email"}
               tooltipText="Copied!"
             >
@@ -71,12 +105,17 @@ const ContactSection = () => {
           </div>
           <div className="flex items-center gap-4 md:gap-5">
             <Phone className="h-6 w-6 md:h-8 md:w-8" />
-            {/* <Link href={`tel:${phone.replace(' ', '')}`}> */}
-            <Typography variant="h2">{phone}</Typography>
-            {/* </Link> */}
+            <Typography variant="h2">
+              {phoneParts.map((part, index) => (
+                <span key={index}>
+                  {atob(part)}
+                  {index < phoneParts.length - 1 ? " " : ""}
+                </span>
+              ))}
+            </Typography>
             <IconButton
               size={width && width < 768 ? "md" : "lg"}
-              onClick={() => handleCopyClick(phone.replace(" ", ""), "phone")}
+              onClick={() => handleCopyClick("phone")}
               showTooltip={isCopied && copiedValueType === "phone"}
               tooltipText="Copied!"
             >
