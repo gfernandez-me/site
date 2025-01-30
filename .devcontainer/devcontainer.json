@@ -16,7 +16,8 @@
                 "streetsidesoftware.code-spell-checker",
                 "ms-azuretools.vscode-docker",
                 "yoavbls.pretty-ts-errors",
-                "eamodio.gitlens"
+                "eamodio.gitlens",
+                "whtouche.vscode-js-console-utils"
             ],
             "settings": {
                 "editor.formatOnSave": true,

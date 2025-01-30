@@ -39,7 +39,15 @@ const ContactSection = () => {
 
   // Decode base64 for copying
   const getDecodedEmail = () => {
-    return emailParts.map((part) => atob(part)).join(".");
+    return emailParts
+      .map((part, index) => {
+        const decoded = atob(part);
+        if (index < emailParts.length - 2) {
+          return decoded + ".";
+        }
+        return decoded;
+      })
+      .join("");
   };
 
   const getDecodedPhone = () => {
@@ -77,8 +85,8 @@ const ContactSection = () => {
           <Tag label="Get in touch" />
         </div>
         <Typography variant="subtitle" className="max-w-xl text-center">
-          What’s next? Feel free to reach out to me if you are looking for a
-          developer, have a query, or simply want to connect.
+          What&apos;s next? Feel free to reach out to me if you are looking for
+          a developer, have a query, or simply want to connect.
         </Typography>
       </div>
 
@@ -90,7 +98,7 @@ const ContactSection = () => {
               {emailParts.map((part, index) => (
                 <span key={index}>
                   {atob(part)}
-                  {index < emailParts.length - 1 ? "." : ""}
+                  {index < emailParts.length - 2 ? "." : ""}
                 </span>
               ))}
             </Typography>
