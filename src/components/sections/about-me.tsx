@@ -63,7 +63,7 @@ const AboutMeSection = () => {
                 Bachelor’s in Computer Science and Engineering
               </Typography>
               <Typography component="li">
-                Started as a web designer, transitioned to development
+                Started as a web designer, transitioned to software development
               </Typography>
             </ul>
             <ul className="flex list-inside list-disc flex-col gap-2">

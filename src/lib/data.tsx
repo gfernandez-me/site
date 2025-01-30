@@ -22,10 +22,13 @@ import LogoPrisma from "/public/images/logos/icon-prisma.svg";
 import LogoMySQL from "/public/images/logos/icon-mysql.svg";
 import LogoAWS from "/public/images/logos/icon-aws.svg";
 
+import ProjectNextERP from "/public/images/project-nexterp.png";
 import ProjectSadieNewton from "/public/images/project-sadie.png";
 import ProjectH2Tech from "/public/images/project-h2tech.png";
-
+import ProjectValorDistributions from "/public/images/project-valor.png";
+import ProjectStlthVape from "/public/images/project-stlth.png";
 import AvatarHensley from "/public/images/avatar-dummy.svg";
+import AvatarSadie from "/public/images/avatar-sadie.svg";
 
 import { ProjectDetails, TechDetails, TestimonialDetails } from "@/lib/types";
 
@@ -165,6 +168,21 @@ export const TECHNOLOGIES: TechDetails[] = [
 
 export const PROJECTS: ProjectDetails[] = [
   {
+    name: "NextERP",
+    description:
+      "A fully optimized ERP system built with Laravel PHP and a Vue.js frontend, designed for inventory, sales, and assembly management. It features a REST API for seamless integration with Dear Inventory and Shopify, ensuring smooth data flow. The system runs on PostgreSQL, offering high performance and scalability. The UI is fully responsive, bug-free, and mobile-friendly. With optimized queries and clean architecture, it delivers a fast and flawless user experience.",
+    url: "https://nexterp.ca/",
+    previewImage: ProjectNextERP,
+    technologies: [
+      "Laravel",
+      "PHP",
+      "Vue.js",
+      "PostgreSQL",
+      "REST API",
+      "Inventory Management",
+    ],
+  },
+  {
     name: "H2Tech",
     description:
       "Developed the official website for a desktop and laptop repair company. The site was meticulously crafted using WordPress and the theme was customized with HTML, CSS, and JavaScript to ensure a seamless user experience. Emphasized web security to protect user data. Successfully deployed the site with a mobile-responsive design, ensuring accessibility across devices. Focused on enhancing user experience with intuitive navigation and implemented SEO strategies to improve visibility on Google search.",
@@ -181,7 +199,7 @@ export const PROJECTS: ProjectDetails[] = [
     name: "Sadie Newton",
     description:
       "Developed a fully customized WordPress website for an author, handling all aspects of the project lifecycle. Designed and implemented a responsive frontend, configured the backend, and ensured seamless deployment with HTTPS and robust security measures. Adapted and tailored a premium WordPress template to align with the client’s branding and needs. Delivered a polished, user-friendly platform that showcases the author’s work effectively and professionally.",
-    url: "https://sadienewton.com/",
+    url: "https://thesadienewton.com/",
     previewImage: ProjectSadieNewton,
     technologies: [
       "Wordpress",
@@ -189,6 +207,34 @@ export const PROJECTS: ProjectDetails[] = [
       "Google Analytics",
       "Custom Built Wordpress Plugins",
       "Custom Built Wordpress Theme",
+    ],
+  },
+  {
+    name: "Valor Distributions",
+    description:
+      "Project Goals: Build a seamless user interface with intuitive navigation and responsive design. Optimize backend processes to enhance performance and load times. Integrate secure payment gateways and ensure data protection. Implement advanced analytics for real-time tracking and decision-making. Solution: Develop a user-friendly, responsive front-end using modern web technologies. Optimize database and server-side performance. Integrate reliable and secure payment APIs. Utilize AI-driven analytics and monitoring tools. Strengthen cybersecurity measures and data encryption.",
+    url: "https://valordistributions.com/",
+    previewImage: ProjectValorDistributions,
+    technologies: [
+      "Shopify Development",
+      "API Integration",
+      "Ecommerce",
+      "SEO Setup & Configuration",
+      "Security Management",
+    ],
+  },
+  {
+    name: "Stlth Vape Store",
+    description:
+      "Project Goals: Build a seamless user interface with intuitive navigation and responsive design. Optimize backend processes to enhance performance and load times. Integrate secure payment gateways and ensure data protection. Implement advanced analytics for real-time tracking and decision-making. Solution: Develop a user-friendly, responsive front-end using modern web technologies. Optimize database and server-side performance. Integrate reliable and secure payment APIs. Utilize AI-driven analytics and monitoring tools. Strengthen cybersecurity measures and data encryption.",
+    url: "https://stlthvape.com/",
+    previewImage: ProjectStlthVape,
+    technologies: [
+      "Shopify Development",
+      "API Integration",
+      "Ecommerce",
+      "SEO Setup & Configuration",
+      "Security Management",
     ],
   },
 ];
@@ -200,5 +246,12 @@ export const TESTIMONIALS: TestimonialDetails[] = [
     title: "CEO & Founder - h2tech.com.br",
     testimonial:
       "I hired Gabriel Fernandez to develop my company's website, and the result was simply amazing! He did all the work following Google's guidelines, which ensured the website reached the top position in search results. Gabriel demonstrates highly advanced knowledge and impressive dedication. Throughout the process, he always focused on my specific needs, making the website perfect for my business. In one of the meetings, he mentioned having over 15 years of experience in the field, which is evident in the quality of his work. I highly recommend Gabriel to anyone looking for a highly skilled and committed programmer!",
+  },
+  {
+    personName: "Sadie Newton",
+    personAvatar: AvatarSadie,
+    title: "Author - thesadienewton.com",
+    testimonial:
+      "Working with Gabriel was an absolute game-changer for my author website! He created a stunning, user-friendly site on WordPress that beautifully showcases my books. The customizations they made to the premium layout were seamless and perfectly tailored to my needs. His expertise with plugins like ACF, Yoast SEO, and Wordfence ensured my site is optimized, secure, and performs flawlessly. I couldn’t be happier with the result—it’s professional, engaging, and exactly what I envisioned. Highly recommend!",
   },
 ];
