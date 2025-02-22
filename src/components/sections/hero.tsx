@@ -30,19 +30,41 @@ const HeroSection = () => {
               Hello
               <span className="inline-block animate-waving-hand">👋</span>
             </Typography>
-            <Typography>
-              I’m Gabriel, a seasoned full-stack developer specializing in
-              React.js, PHP and Node.js. I’m passionate about creating
-              exceptional digital experiences that are fast, accessible,
-              visually appealing, and fully responsive. With over{" "}
-              {Math.floor(
-                (new Date().getTime() - new Date("2007-04-01").getTime()) /
-                  (1000 * 60 * 60 * 24 * 365.25)
-              )}{" "}
-              years of experience in building web applications, my enthusiasm
-              for development is as vibrant as ever, approaching every project
-              with fresh energy and excitement.
-            </Typography>
+            <div className="flex flex-col gap-4">
+              <Typography>
+                I'm Gabriel, a seasoned full-stack developer with a strong focus
+                on React.js and Node.js. I thrive on building modern,
+                high-performance web applications that are fast, accessible, and
+                visually engaging.
+              </Typography>
+
+              <Typography>
+                While my expertise lies in React and Node, I also have
+                experience with languages like PHP and Vue.js, which I use for
+                side projects or when the situation calls for it. With over{" "}
+                {Math.floor(
+                  (new Date().getTime() - new Date("2007-04-01").getTime()) /
+                    (1000 * 60 * 60 * 24 * 365.25)
+                )}{" "}
+                years in web development, I&apos;ve worked with a variety of
+                technologies, including C, C++, VB6, Python, Kotlin, and Java,
+                as well as major database languages like PL/SQL, PL/pgSQL and
+                T-SQL.
+              </Typography>
+
+              <Typography>
+                I&apos;ve also worked extensively with web services and backend
+                integrations, ensuring seamless communication between
+                applications. In recent years, I&apos;ve taken on roles as a
+                tech lead and team leader, guiding projects from start to finish
+                while mentoring junior developers along the way.
+              </Typography>
+
+              <Typography>
+                I&apos;m passionate about clean, maintainable code and always
+                eager to tackle new challenges with fresh energy.
+              </Typography>
+            </div>
           </div>
           <div className="flex flex-col gap-2">
             <div className="flex gap-2">

@@ -32,17 +32,75 @@ const AboutMeSection = () => {
             Curious about me? Here&apos;s my story:
           </Typography>
           <Typography>
-            With over a decade of experience as a software engineer, I have
-            advanced from hands-on development to leading technical teams and
-            delivering complex, high-impact solutions. My career spans diverse
-            industries and countries, where I’ve tackled unique challenges and
-            built scalable, secure, and innovative software systems.
+            My career spans diverse industries and countries, where I&apos;ve
+            tackled unique challenges and built scalable, secure, and innovative
+            software systems.
           </Typography>
           <Typography>
-            I’ve worked across the globe, leading and contributing to projects
-            that required adaptability to any technology stack or programming
-            language. My expertise includes full-stack development, API design,
-            cloud-based solutions, and mentoring teams to achieve their best.
+            Industries I&apos;ve worked in:
+            <ul className="mt-4 flex flex-col gap-3">
+              <li className="flex gap-2 before:content-['•'] before:text-gray-900">
+                <span>
+                  <span className="font-medium text-gray-900">
+                    Textile Industry:
+                  </span>{" "}
+                  Developed and maintained ERP systems for a large-scale
+                  factory.
+                </span>
+              </li>
+              <li className="flex gap-2 before:content-['•'] before:text-gray-900">
+                <span>
+                  <span className="font-medium text-gray-900">
+                    Retail & Wholesale:
+                  </span>{" "}
+                  Built and optimized solutions for grocery stores and wholesale
+                  distribution.
+                </span>
+              </li>
+              <li className="flex gap-2 before:content-['•'] before:text-gray-900">
+                <span>
+                  <span className="font-medium text-gray-900">
+                    Vape Industry:
+                  </span>{" "}
+                  Managed B2B and B2C platforms for vape production,
+                  distribution, and assembly.
+                </span>
+              </li>
+              <li className="flex gap-2 before:content-['•'] before:text-gray-900">
+                <span>
+                  <span className="font-medium text-gray-900">
+                    Government (Education Sector):
+                  </span>{" "}
+                  Developed/Maintained software for public schools and
+                  universities.
+                </span>
+              </li>
+              <li className="flex gap-2 before:content-['•'] before:text-gray-900">
+                <span>
+                  <span className="font-medium text-gray-900">
+                    Government (Finance Department):
+                  </span>{" "}
+                  Developed/Maintained financial management systems.
+                </span>
+              </li>
+              <li className="flex gap-2 before:content-['•'] before:text-gray-900">
+                <span>
+                  <span className="font-medium text-gray-900">
+                    Federal Court of Justice:
+                  </span>{" "}
+                  Developed/Maintained legal and judicial software solutions.
+                </span>
+              </li>
+              <li className="flex gap-2 before:content-['•'] before:text-gray-900">
+                <span>
+                  <span className="font-medium text-gray-900">
+                    Government (Environmental Sector):
+                  </span>{" "}
+                  Developed/Maintained tools for environmental monitoring and
+                  regulation.
+                </span>
+              </li>
+            </ul>
           </Typography>
           <Typography>
             Highlights include transforming IT teams, resolving critical system
@@ -51,16 +109,11 @@ const AboutMeSection = () => {
             work with legacy systems and cutting-edge technologies showcases my
             versatility and problem-solving prowess.
           </Typography>
-          <Typography>
-            I’m passionate about delivering quality software and fostering
-            collaboration, creating sustainable systems that drive business
-            success.
-          </Typography>
           <Typography>Finally, some quick bits about me.</Typography>
           <div className="flex flex-col gap-2 md:flex-row md:gap-6">
             <ul className="flex list-inside list-disc flex-col gap-2">
               <Typography component="li">
-                Bachelor’s in Computer Science and Engineering
+                Bachelor&apos;s of Technology
               </Typography>
               <Typography component="li">
                 Started as a web designer, transitioned to software development
@@ -75,11 +128,6 @@ const AboutMeSection = () => {
               </Typography>
             </ul>
           </div>
-          <Typography>
-            I’m currently available for freelance work! Whether you need help
-            bringing your ideas to life or solving tough technical challenges,
-            let’s collaborate to make it happen. 😉
-          </Typography>
         </div>
       </div>
     </Container>
