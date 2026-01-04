@@ -14,9 +14,6 @@ import LogoPostgreSQL from "/public/images/logos/icon-postgresql.svg";
 import LogoMongoDB from "/public/images/logos/icon-mongodb.svg";
 import LogoRemix from "/public/images/logos/icon-remix.svg";
 import LogoTailwindcss from "/public/images/logos/icon-tailwindcss.svg";
-import LogoPHP from "/public/images/logos/icon-php.svg";
-import LogoLaravel from "/public/images/logos/icon-laravel.svg";
-import LogoLaravelLight from "/public/images/logos/icon-laravel-light.svg";
 import LogoWordpress from "/public/images/logos/icon-wordpress.svg";
 import LogoShopify from "/public/images/logos/icon-shopify.svg";
 import LogoPrisma from "/public/images/logos/icon-prisma.svg";
@@ -156,17 +153,6 @@ export const TECHNOLOGIES: TechDetails[] = [
     url: "https://tailwindcss.com/",
   },
   {
-    label: "PHP",
-    logo: LogoPHP,
-    url: "https://www.php.net/",
-  },
-  {
-    label: "Laravel",
-    logo: LogoLaravel,
-    darkModeLogo: LogoLaravelLight,
-    url: "https://laravel.com/",
-  },
-  {
     label: "Prisma",
     logo: LogoPrisma,
     darkModeLogo: LogoPrismaLight,
@@ -184,16 +170,16 @@ export const PROJECTS: ProjectDetails[] = [
   {
     name: "NextERP",
     description:
-      "A fully optimized ERP system built with Laravel PHP and a Vue.js frontend, designed for inventory, sales, and assembly management. It features a REST API for seamless integration with Dear Inventory and Shopify, ensuring smooth data flow. The system runs on PostgreSQL, offering high performance and scalability. The UI is fully responsive, bug-free, and mobile-friendly. With optimized queries and clean architecture, it delivers a fast and flawless user experience.",
+      "A fully optimized ERP system designed for inventory, sales, and assembly management. It includes a robust API layer for integration with Dear Inventory and Shopify, with smooth data flow and strong performance on PostgreSQL. The UI is fully responsive and optimized for fast workflows.",
     url: "https://nexterp.ca/",
     previewImage: ProjectNextERP,
     technologies: [
-      "Laravel",
-      "PHP",
       "Vue.js",
       "PostgreSQL",
       "REST API",
       "Redis",
+      "Shopify Integration",
+      "Inventory Management",
     ],
   },
   {
@@ -232,7 +218,6 @@ export const PROJECTS: ProjectDetails[] = [
     previewImage: ProjectH2Tech,
     technologies: [
       "Wordpress",
-      "PHP",
       "Google Analytics",
       "Custom Built Wordpress Plugins",
     ],
@@ -245,7 +230,6 @@ export const PROJECTS: ProjectDetails[] = [
     previewImage: ProjectSadieNewton,
     technologies: [
       "Wordpress",
-      "PHP",
       "Google Analytics",
       "Custom Built Wordpress Plugins",
       "Custom Built Wordpress Theme",

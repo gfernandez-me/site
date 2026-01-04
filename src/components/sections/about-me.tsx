@@ -28,104 +28,62 @@ const AboutMeSection = () => {
 
         {/* Content */}
         <div className="flex max-w-xl flex-col gap-6">
-          <Typography variant="h3">
-            Curious about me? Here&apos;s my story:
-          </Typography>
+          <Typography variant="h3">Curious about me? Here's a quick story:</Typography>
+
           <Typography>
-            My career spans diverse industries and countries, where I&apos;ve
-            tackled unique challenges and built scalable, secure, and innovative
-            software systems.
+            I'm a senior full-stack engineer (17+ years) focused on TypeScript, React/Next.js, and
+            Node/NestJS. I build user-facing products and backend services that are simple, fast,
+            and reliable.
           </Typography>
+
           <Typography>
-            Industries I&apos;ve worked in:
+            Most of my work is end-to-end: shaping the solution with product/design, building the
+            feature, shipping safely, and supporting it in production. I'm strong with integrations
+            and operational work (queues, retries, webhooks, background jobs), and I care a lot
+            about tests, docs, and clean code.
+          </Typography>
+
+          <Typography>
+            Systems I've built:
             <ul className="mt-4 flex flex-col gap-3">
               <li className="flex gap-2 before:content-['•'] before:text-gray-900">
                 <span>
-                  <span className="font-medium text-gray-900">
-                    Textile Industry:
-                  </span>{" "}
-                  Developed and maintained ERP systems for a large-scale
-                  factory.
+                  <span className="font-medium text-gray-900">E-commerce & Wholesale:</span>{" "}
+                  Shopify storefronts and internal tools that support real operations.
                 </span>
               </li>
               <li className="flex gap-2 before:content-['•'] before:text-gray-900">
                 <span>
-                  <span className="font-medium text-gray-900">
-                    Retail & Wholesale:
-                  </span>{" "}
-                  Built and optimized solutions for grocery stores and wholesale
-                  distribution.
+                  <span className="font-medium text-gray-900">Manufacturing & ERP workflows:</span>{" "}
+                  Inventory, sales, assembly, and reporting systems focused on speed and accuracy.
                 </span>
               </li>
               <li className="flex gap-2 before:content-['•'] before:text-gray-900">
                 <span>
-                  <span className="font-medium text-gray-900">
-                    Vape Industry:
-                  </span>{" "}
-                  Managed B2B and B2C platforms for vape production,
-                  distribution, and assembly.
-                </span>
-              </li>
-              <li className="flex gap-2 before:content-['•'] before:text-gray-900">
-                <span>
-                  <span className="font-medium text-gray-900">
-                    Government (Education Sector):
-                  </span>{" "}
-                  Developed/Maintained software for public schools and
-                  universities.
-                </span>
-              </li>
-              <li className="flex gap-2 before:content-['•'] before:text-gray-900">
-                <span>
-                  <span className="font-medium text-gray-900">
-                    Government (Finance Department):
-                  </span>{" "}
-                  Developed/Maintained financial management systems.
-                </span>
-              </li>
-              <li className="flex gap-2 before:content-['•'] before:text-gray-900">
-                <span>
-                  <span className="font-medium text-gray-900">
-                    Federal Court of Justice:
-                  </span>{" "}
-                  Developed/Maintained legal and judicial software solutions.
-                </span>
-              </li>
-              <li className="flex gap-2 before:content-['•'] before:text-gray-900">
-                <span>
-                  <span className="font-medium text-gray-900">
-                    Government (Environmental Sector):
-                  </span>{" "}
-                  Developed/Maintained tools for environmental monitoring and
-                  regulation.
+                  <span className="font-medium text-gray-900">Public sector:</span>{" "}
+                  Large systems with strict requirements and long-term maintenance.
                 </span>
               </li>
             </ul>
           </Typography>
+
           <Typography>
-            Highlights include transforming IT teams, resolving critical system
-            issues, implementing CI/CD pipelines, and integrating advanced
-            e-commerce, social media, and data-driven solutions. My ability to
-            work with legacy systems and cutting-edge technologies showcases my
-            versatility and problem-solving prowess.
+            What people usually notice when working with me: steady delivery, clear communication,
+            high review standards, and mentoring support for developers.
           </Typography>
+
           <Typography>Finally, some quick bits about me.</Typography>
+
           <div className="flex flex-col gap-2 md:flex-row md:gap-6">
             <ul className="flex list-inside list-disc flex-col gap-2">
-              <Typography component="li">
-                Bachelor&apos;s of Technology
-              </Typography>
+              <Typography component="li">Bachelor's of Technology</Typography>
               <Typography component="li">
                 Started as a web designer, transitioned to software development
               </Typography>
             </ul>
             <ul className="flex list-inside list-disc flex-col gap-2">
-              <Typography component="li">
-                Enthusiast for AI and emerging technologies
-              </Typography>
-              <Typography component="li">
-                Love mountain biking and exploring nature trails
-              </Typography>
+              <Typography component="li">Use AI tools with strong review/testing guardrails</Typography>
+              <Typography component="li">Love mountain biking and exploring nature trails</Typography>
             </ul>
           </div>
         </div>
