@@ -1,4 +1,4 @@
-import { Github, Linkedin, Briefcase, Figma } from "lucide-react";
+import { Github, Linkedin, Briefcase } from "lucide-react";
 
 import LogoJavascript from "/public/images/logos/icon-javascript.svg";
 import LogoTypescript from "/public/images/logos/icon-typescript.svg";
@@ -35,142 +35,46 @@ import AvatarSadie from "/public/images/avatar-sadie.svg";
 import { ProjectDetails, TechDetails, TestimonialDetails } from "@/lib/types";
 
 export const NAV_LINKS = [
-  {
-    label: "About",
-    href: "#about",
-  },
-  {
-    label: "Work",
-    href: "#work",
-  },
-  {
-    label: "Testimonials",
-    href: "#testimonials",
-  },
-  {
-    label: "Contact",
-    href: "#contact",
-  },
+  { label: "About", href: "#about" },
+  { label: "Work", href: "#work" },
+  { label: "Testimonials", href: "#testimonials" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export const SOCIAL_LINKS = [
-  {
-    icon: Linkedin,
-    url: "https://www.linkedin.com/in/gabriel-m-fernandez/",
-  },
-  {
-    icon: Github,
-    url: "https://github.com/gfernandez-me",
-  },
-  {
-    icon: Briefcase,
-    url: "https://www.upwork.com/freelancers/~019fa4c72966b8eb13",
-  },
+  { icon: Linkedin, url: "https://www.linkedin.com/in/gabriel-m-fernandez/" },
+  { icon: Github, url: "https://github.com/gfernandez-me" },
+  { icon: Briefcase, url: "https://www.upwork.com/freelancers/~019fa4c72966b8eb13" },
 ];
 
 export const TECHNOLOGIES: TechDetails[] = [
-  {
-    label: "Typescript",
-    logo: LogoTypescript,
-    url: "https://www.typescriptlang.org/",
-  },
-  {
-    label: "Javascript",
-    logo: LogoJavascript,
-    url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-  },
-  {
-    label: "React",
-    logo: LogoReact,
-    url: "https://react.dev/",
-  },
-  {
-    label: "Node.js",
-    logo: LogoNodejs,
-    url: "https://nodejs.org/en",
-  },
-  {
-    label: "Vue.js",
-    logo: LogoVuejs,
-    url: "https://vuejs.org/",
-  },
-  {
-    label: "Wordpress",
-    logo: LogoWordpress,
-    url: "https://wordpress.org/",
-  },
-  {
-    label: "Shopify",
-    logo: LogoShopify,
-    url: "https://www.shopify.com/",
-  },
-  {
-    label: "Next.js",
-    logo: LogoNextjs,
-    url: "https://nextjs.org/",
-  },
-  {
-    label: "Express.js",
-    logo: LogoExpress,
-    darkModeLogo: LogoExpressLight,
-    url: "https://expressjs.com/",
-  },
-  {
-    label: "Remix",
-    logo: LogoRemix,
-    url: "https://remix.run/",
-  },
-  {
-    label: "Nest.js",
-    logo: LogoNest,
-    url: "https://nestjs.com/",
-  },
-  {
-    label: "Socket.io",
-    logo: LogoSocket,
-    darkModeLogo: LogoSocketLight,
-    url: "https://socket.io/",
-  },
-  {
-    label: "MySQL",
-    logo: LogoMySQL,
-    darkModeLogo: LogoMySQLLight,
-    url: "https://www.mysql.com/",
-  },
-  {
-    label: "PostgreSQL",
-    logo: LogoPostgreSQL,
-    url: "https://www.postgresql.org/",
-  },
-  {
-    label: "MongoDB",
-    logo: LogoMongoDB,
-    url: "https://www.mongodb.com/",
-  },
-  {
-    label: "Tailwindcss",
-    logo: LogoTailwindcss,
-    url: "https://tailwindcss.com/",
-  },
-  {
-    label: "Prisma",
-    logo: LogoPrisma,
-    darkModeLogo: LogoPrismaLight,
-    url: "https://www.prisma.io/",
-  },
-  {
-    label: "AWS Integrations",
-    logo: LogoAWS,
-    darkModeLogo: LogoAWSLight,
-    url: "https://aws.amazon.com/",
-  },
+  { label: "TypeScript", logo: LogoTypescript, url: "https://www.typescriptlang.org/" },
+  { label: "JavaScript", logo: LogoJavascript, url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+  { label: "React", logo: LogoReact, url: "https://react.dev/" },
+  { label: "Next.js", logo: LogoNextjs, url: "https://nextjs.org/" },
+  { label: "Node.js", logo: LogoNodejs, url: "https://nodejs.org/en" },
+  { label: "NestJS", logo: LogoNest, url: "https://nestjs.com/" },
+  { label: "Express", logo: LogoExpress, darkModeLogo: LogoExpressLight, url: "https://expressjs.com/" },
+  { label: "Remix", logo: LogoRemix, url: "https://remix.run/" },
+  { label: "Socket.IO", logo: LogoSocket, darkModeLogo: LogoSocketLight, url: "https://socket.io/" },
+  { label: "PostgreSQL", logo: LogoPostgreSQL, url: "https://www.postgresql.org/" },
+  { label: "MongoDB", logo: LogoMongoDB, url: "https://www.mongodb.com/" },
+  { label: "MySQL", logo: LogoMySQL, darkModeLogo: LogoMySQLLight, url: "https://www.mysql.com/" },
+  { label: "Prisma", logo: LogoPrisma, darkModeLogo: LogoPrismaLight, url: "https://www.prisma.io/" },
+  { label: "Tailwind CSS", logo: LogoTailwindcss, url: "https://tailwindcss.com/" },
+  { label: "AWS", logo: LogoAWS, darkModeLogo: LogoAWSLight, url: "https://aws.amazon.com/" },
+  { label: "Shopify", logo: LogoShopify, url: "https://www.shopify.com/" },
+  { label: "Vue.js", logo: LogoVuejs, url: "https://vuejs.org/" },
+
+  // Keep WordPress for freelance, but keep it last so it doesn't distract for TS/Node roles
+  { label: "WordPress", logo: LogoWordpress, url: "https://wordpress.org/" },
 ];
 
 export const PROJECTS: ProjectDetails[] = [
   {
     name: "NextERP",
     description:
-      "A fully optimized ERP system designed for inventory, sales, and assembly management. It includes a robust API layer for integration with Dear Inventory and Shopify, with smooth data flow and strong performance on PostgreSQL. The UI is fully responsive and optimized for fast workflows.",
+      "A fully optimized ERP system for inventory, sales, and assembly workflows. Includes an API layer integrating with Dear Inventory and Shopify, with strong performance on PostgreSQL and a responsive UI designed for fast internal operations.",
     url: "https://nexterp.ca/",
     previewImage: ProjectNextERP,
     technologies: [
@@ -185,54 +89,52 @@ export const PROJECTS: ProjectDetails[] = [
   {
     name: "Valor Distributions",
     description:
-      "Project Goals: Build a seamless user interface with intuitive navigation and responsive design. Optimize backend processes to enhance performance and load times. Integrate secure payment gateways and ensure data protection. Implement advanced analytics for real-time tracking and decision-making. Solution: Develop a user-friendly, responsive front-end using modern web technologies. Optimize database and server-side performance. Integrate reliable and secure payment APIs. Utilize AI-driven analytics and monitoring tools. Strengthen cybersecurity measures and data encryption.",
+      "Led development of a Shopify storefront and internal tools focused on reliability and speed. Built integrations and backend services around Shopify APIs and webhooks, and improved operational workflows with background jobs, retries, and clean monitoring so the team can ship safely and support production with confidence.",
     url: "https://valordistributions.com/",
     previewImage: ProjectValorDistributions,
     technologies: [
-      "Shopify Development",
-      "API Integration",
-      "ReactJS and Node.js",
-      "SEO Optimization",
-      "Security Management",
+      "Shopify",
+      "Hydrogen / Remix",
+      "React",
+      "Node.js",
+      "APIs & Webhooks",
+      "Queues & Background Jobs",
     ],
   },
   {
     name: "Stlth Vape Store",
     description:
-      "Project Goals: Build a seamless user interface with intuitive navigation and responsive design. Optimize backend processes to enhance performance and load times. Integrate secure payment gateways and ensure data protection. Implement advanced analytics for real-time tracking and decision-making. Solution: Develop a user-friendly, responsive front-end using modern web technologies. Optimize database and server-side performance. Integrate reliable and secure payment APIs. Utilize AI-driven analytics and monitoring tools. Strengthen cybersecurity measures and data encryption.",
+      "E-commerce storefront work focused on performance and maintainability. Delivered UI improvements, integrations, and operational fixes around Shopify APIs and webhooks, with attention to safe releases, clean code, and production stability.",
     url: "https://stlthvape.com/",
     previewImage: ProjectStlthVape,
     technologies: [
-      "Shopify Development",
+      "Shopify",
+      "React",
+      "Node.js",
       "API Integration",
-      "Ecommerce",
-      "SEO Setup & Configuration",
-      "Security Management",
+      "Webhooks",
+      "Performance",
     ],
   },
   {
     name: "H2Tech",
     description:
-      "Developed the official website for a desktop and laptop repair company. The site was meticulously crafted using WordPress and the theme was customized with HTML, CSS, and JavaScript to ensure a seamless user experience. Emphasized web security to protect user data. Successfully deployed the site with a mobile-responsive design, ensuring accessibility across devices. Focused on enhancing user experience with intuitive navigation and implemented SEO strategies to improve visibility on Google search.",
+      "Developed the official website for a desktop and laptop repair company. Built on WordPress with customized theme work (HTML/CSS/JS), mobile responsiveness, and SEO improvements for better visibility.",
     url: "https://h2tech.com.br/",
     previewImage: ProjectH2Tech,
-    technologies: [
-      "Wordpress",
-      "Google Analytics",
-      "Custom Built Wordpress Plugins",
-    ],
+    technologies: ["WordPress", "Google Analytics", "Custom WordPress Plugins"],
   },
   {
     name: "Sadie Newton",
     description:
-      "Developed a fully customized WordPress website for an author, handling all aspects of the project lifecycle. Designed and implemented a responsive frontend, configured the backend, and ensured seamless deployment with HTTPS and robust security measures. Adapted and tailored a premium WordPress template to align with the client's branding and needs. Delivered a polished, user-friendly platform that showcases the author's work effectively and professionally.",
+      "Built a customized WordPress website for an author, including responsive frontend work, deployment with HTTPS, and a clean structure to showcase books and content professionally.",
     url: "https://thesadienewton.com/",
     previewImage: ProjectSadieNewton,
     technologies: [
-      "Wordpress",
+      "WordPress",
       "Google Analytics",
-      "Custom Built Wordpress Plugins",
-      "Custom Built Wordpress Theme",
+      "Custom WordPress Plugins",
+      "Custom WordPress Theme",
     ],
   },
 ];
