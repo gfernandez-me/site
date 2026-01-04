@@ -1,5 +1,5 @@
 {
-    "name": "Next.js Development",
+    "name": "gfernandez.dev",
     "dockerComposeFile": "docker-compose.yml",
     "service": "web",
     "workspaceFolder": "/workspace",
